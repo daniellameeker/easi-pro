@@ -1,0 +1,27 @@
+{{define "sidenav"}}
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element"> <span>
+                        <img alt="image" class="img-circle" src="https://s3-us-west-2.amazonaws.com/qolty/images/logo/logo_inverse.png" style="width:50px" />
+                         </span>
+                </div>
+            </li>
+            <li class="{{.HOME_ACTIVE}}">
+                <a href="/"><span class="nav-label">Home</span> </a>
+            </li>
+            <li class="{{.WORKFLOWS_ACTIVE}}">
+                <a href="#"><span class="nav-label">Workflows</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li class="{{.WAITING_ACTIVE}}"><a href="/waitingArea"><i class="fa fa-hourglass-end"></i> Waiting Area</a></li>
+                    <li class="{{.PORTAL_ACTIVE}}"><a href="/patientPortal"><i class="fa fa-drivers-license"></i> Patient Portal</a></li>
+                    <li class="{{.ORDER_ACTIVE}}"><a href="/orderProcess"><i class="fa fa-flask"></i> Order Process</a></li>
+                    <li class="{{.PT_CHART_ACTIVE}}"><a href="/patientChart"><i class="fa fa-line-chart"></i> Patient Chart</a></li>
+                    <li class="{{.POP_CHART_ACTIVE}}"><a href="/populationChart"><i class="fa fa-users"></i> Population Chart</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+{{end}}

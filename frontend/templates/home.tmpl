@@ -1,0 +1,305 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qoltyscience">
+    <meta name="twitter:creator" content="@qoltyscience">
+    <meta name="twitter:title" content="Understand your patients whenever, wherever, however.">
+    <meta name="twitter:description" content="Digital Health Research Tools">
+
+    <title>EASI-PRO</title>
+    <meta name="description" content="Understand your patients whenever, wherever, however.">
+    <meta name="keywords" content="qolty, science, digital research tools, research, tool, clinical, health, healthcare, technology, app, mobile apps, customizable">
+
+    <meta property="og:title" content="Qolty">
+    <meta property="og:site_name" content="Qolty">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Understand your patients whenever, wherever, however.">
+    <meta property="og:image" content="https://qolty-mazeengillc.netdna-ssl.com/wp-content/uploads/2017/04/cover-push-notifications.png?x47743">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://qolty-mazeengillc.netdna-ssl.com/wp-content/uploads/2017/04/logo-and-cover-03-1.png?x47743">
+
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/animate.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/style.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/plugins/cropper/cropper.min.css" rel="stylesheet">
+
+
+
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/easipro.css" rel="stylesheet">
+
+    <style>
+        .img-preview {
+            height:0px;
+            width:0px;
+        }
+    </style>
+
+    <script src="https://use.fontawesome.com/6f9302e855.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+    {{template "sidenav" .}}
+
+    <div id="page-wrapper" class="gray-bg">
+
+    {{template "topnav" .}}
+
+    <div class="wrapper wrapper-content" style="padding-bottom:40px">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>EASI-PRO FHIR Demo</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ibox-content">
+                        Welcome to the EASI-PRO demo! Check out some of the <a href="/waitingArea">workflows</a> and code snippets below.
+                    </div>
+                </div>
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>FHIR Code Snippet <small>Get list of patients.</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ibox-content">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">$.ajax({
+    url<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;http://easi-pro.org:3001/Patient&quot;</span>, <span style="color: #888888">// live FHIR server</span>
+    type<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;GET&quot;</span>,
+    success<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">function</span>(data){
+        <span style="color: #008800; font-weight: bold">for</span> (<span style="color: #008800; font-weight: bold">var</span> i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> data.entry.length; i<span style="color: #333333">++</span>){
+            console.log(data.entry[i]);
+        }
+    }
+});
+</pre></div>
+
+                    </div>
+                </div>
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Assessment Center Code Snippet <small>Start assessment.</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ibox-content">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">function</span> startAssessment(promisUID){
+  $.ajax({
+    url<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;https://www.assessmentcenter.net/ac_api/2014-01/Assessments/&quot;</span> <span style="color: #333333">+</span> promisUID <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot;.json&quot;</span>,
+    cache<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">false</span>,
+    type<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;POST&quot;</span>,
+    data<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;UID=&quot;</span> <span style="color: #333333">+</span> promisUID,
+    dataType<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;json&quot;</span>,
+    
+    beforeSend<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">function</span>(xhr) {
+    
+      <span style="color: #008800; font-weight: bold">var</span> Reg <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;</span>;
+      <span style="color: #008800; font-weight: bold">var</span> Token <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;</span>;
+    
+      <span style="color: #008800; font-weight: bold">var</span> bytes <span style="color: #333333">=</span> Crypto.charenc.Binary.stringToBytes( Reg <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot;:&quot;</span> <span style="color: #333333">+</span> Token );
+      <span style="color: #008800; font-weight: bold">var</span> base64 <span style="color: #333333">=</span> Crypto.util.bytesToBase64(bytes);
+      xhr.setRequestHeader(<span style="background-color: #fff0f0">&quot;Authorization&quot;</span>, <span style="background-color: #fff0f0">&quot;Basic &quot;</span> <span style="color: #333333">+</span> base64);
+    },
+    
+    success<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">function</span>(data) { 
+      currentPromisOID <span style="color: #333333">=</span> data.OID;
+      renderScreen(data.OID, <span style="background-color: #fff0f0">&quot;&quot;</span>, <span style="background-color: #fff0f0">&quot;&quot;</span>);
+    },
+    
+    error<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">function</span>(jqXHR, textStatus, errorThrown){
+      console.log(errorThrown);
+    }
+  })
+}
+</pre></div>
+
+                    </div>
+                </div>
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>High-level architecture</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ibox-content" style="padding:20px">
+                        <img src="https://s3-us-west-2.amazonaws.com/qolty/images/easipro.png" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{template "footer" .}}
+
+    <!-- Mainly scripts -->
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/jquery-3.1.1.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/bootstrap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/cropper/cropper.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/toastr/toastr.min.js"></script>
+
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/inspinia.js"></script>
+
+    <script>
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "progressBar": true,
+          "preventDuplicates": false,
+          "positionClass": "toast-top-right",
+          "onclick": null,
+          "showDuration": "400",
+          "hideDuration": "1000",
+          "timeOut": "3000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        }
+
+        var $image = $(".image-crop > img")
+        $($image).cropper({
+            aspectRatio: 1,
+            preview: ".img-preview",
+            done: function(data) {
+                // Output the result data for cropping image.
+            }
+        });
+
+        var $inputImage = $("#inputImage");
+        if (window.FileReader) {
+            $inputImage.change(function() {
+                var fileReader = new FileReader(),
+                        files = this.files,
+                        file;
+
+                if (!files.length) {
+                    return;
+                }
+
+                file = files[0];
+
+                if (/^image\/\w+$/.test(file.type)) {
+                    fileReader.readAsDataURL(file);
+                    fileReader.onload = function () {
+                        $inputImage.val("");
+                        $image.cropper("reset", true).cropper("replace", this.result);
+                        $(".img-preview").css("height", "100px");
+                        $(".img-preview").css("width", "100px");
+                    };
+                } else {
+                    showMessage("Please choose an image file.");
+                }
+            });
+        } else {
+            $inputImage.addClass("hide");
+        }
+
+        $("#setDrag").click(function() {
+            $image.cropper("setDragMode", "crop");
+        });
+
+        $("#studyName").val(window.localStorage.getItem('studyName'));
+        $("#studyContactName").val(window.localStorage.getItem('studyContactName'));
+        $("#studyContactEmail").val(window.localStorage.getItem('studyContactEmail'));
+        $("#studyInstitution").val(window.localStorage.getItem('studyInstitution'));
+
+        if (window.localStorage.getItem('studyLogo') != "" && window.localStorage.getItem('studyLogo') != null) {
+            $inputImage.val("");
+            $image.cropper("reset", true).cropper("replace", window.localStorage.getItem('studyLogo'));
+            $(".img-preview").css("height", "100px");
+            $(".img-preview").css("width", "100px");
+        }
+
+        if (window.localStorage.getItem('studyLocations') != "" && window.localStorage.getItem('studyLocations') != null) {
+            $("#studyLocations").val(window.localStorage.getItem('studyLocations').split(","));
+        }
+
+        if (window.localStorage.getItem('studyLanguages') != "" && window.localStorage.getItem('studyLanguages') != null) {
+            $("#studyLanguages").val(window.localStorage.getItem('studyLanguages').split(","));
+        }
+
+        $('.chosen-select').chosen({width: "100%"});
+
+        if (window.localStorage.getItem('studyType') != "" && window.localStorage.getItem('studyType') != null) {
+            $("#studyType").val(window.localStorage.getItem('studyType'));
+        }
+
+        $("#studyMultipleSites").attr("checked", "true" == window.localStorage.getItem('studyMultipleSites'));
+        $("#studyRemoteStudy").attr("checked", "true" == window.localStorage.getItem('studyRemoteStudy'));
+
+        if (window.localStorage.getItem('studyDurationStart') != "" && window.localStorage.getItem('studyDurationStart') != null) {
+            $("#studyDurationStart").val(window.localStorage.getItem('studyDurationStart'));
+        }
+
+        if (window.localStorage.getItem('studyDurationEnd') != "" && window.localStorage.getItem('studyDurationEnd') != null) {
+            $("#studyDurationEnd").val(window.localStorage.getItem('studyDurationEnd'));
+        }
+
+        $('.input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+
+        $("input, select").on("change keyup paste", function(){
+            window.localStorage.setItem('studyName', $("#studyName").val());
+            window.localStorage.setItem('studyContactName', $("#studyContactName").val());
+            window.localStorage.setItem('studyContactEmail', $("#studyContactEmail").val());
+            window.localStorage.setItem('studyInstitution', $("#studyInstitution").val());
+            window.localStorage.setItem('studyLocations', $("#studyLocations").val());
+            window.localStorage.setItem('studyLanguages', $("#studyLanguages").val());
+            window.localStorage.setItem('studyType', $("#studyType").val());
+            window.localStorage.setItem('studyMultipleSites', $("#studyMultipleSites").is(':checked'));
+            window.localStorage.setItem('studyRemoteStudy', $("#studyRemoteStudy").is(':checked'));
+            window.localStorage.setItem('studyDurationStart', $("#studyDurationStart").val());
+            window.localStorage.setItem('studyDurationEnd', $("#studyDurationEnd").val());
+            window.localStorage.setItem('studyNumParticipants', $("#studyNumParticipants").val());
+            window.localStorage.setItem('studyLogo', $(".img-preview img").attr("src"));
+        });
+
+        $("#studyNumParticipants").val(window.localStorage.getItem('studyNumParticipants'));
+    </script>
+
+</body>
+</html>
+{{end}}

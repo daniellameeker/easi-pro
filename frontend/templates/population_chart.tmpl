@@ -1,0 +1,172 @@
+{{define "population_chart"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qoltyscience">
+    <meta name="twitter:creator" content="@qoltyscience">
+    <meta name="twitter:title" content="Understand your patients whenever, wherever, however.">
+    <meta name="twitter:description" content="Digital Health Research Tools">
+
+    <title>EASI-PRO</title>
+    <meta name="description" content="Understand your patients whenever, wherever, however.">
+    <meta name="keywords" content="qolty, science, digital research tools, research, tool, clinical, health, healthcare, technology, app, mobile apps, customizable">
+
+    <meta property="og:title" content="Qolty">
+    <meta property="og:site_name" content="Qolty">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Understand your patients whenever, wherever, however.">
+    <meta property="og:image" content="https://qolty-mazeengillc.netdna-ssl.com/wp-content/uploads/2017/04/cover-push-notifications.png?x47743">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://qolty-mazeengillc.netdna-ssl.com/wp-content/uploads/2017/04/logo-and-cover-03-1.png?x47743">
+
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/animate.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/style.css" rel="stylesheet">
+    <link href="https://s3-us-west-2.amazonaws.com/qolty/demo/css/easipro.css" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/6f9302e855.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+    {{template "sidenav" .}}
+
+    <div id="page-wrapper" class="gray-bg">
+
+    {{template "topnav" .}}
+
+    <div class="wrapper wrapper-content" style="padding-bottom:40px">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Population Chart </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Data</th>
+                                <th>User</th>
+                                <th>Value</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>13179197931</td>
+                                <td><span class="line" style="display: none;">5,3,2,-1,-3,-2,2,3,5,2</span><svg class="peity" height="16" width="32"><polygon fill="#1ab394" points="0 9.375 0 0.5 3.5555555555555554 4.25 7.111111111111111 6.125 10.666666666666666 11.75 14.222222222222221 15.5 17.77777777777778 13.625 21.333333333333332 6.125 24.888888888888886 4.25 28.444444444444443 0.5 32 6.125 32 9.375"></polygon><polyline fill="transparent" points="0 0.5 3.5555555555555554 4.25 7.111111111111111 6.125 10.666666666666666 11.75 14.222222222222221 15.5 17.77777777777778 13.625 21.333333333333332 6.125 24.888888888888886 4.25 28.444444444444443 0.5 32 6.125" stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline></svg></td>
+                                <td>Samantha</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                            </tr>
+                            <tr>
+                                <td>72111197631</td>
+                                <td><span class="line" style="display: none;">5,3,9,6,5,9,7,3,5,2</span><svg class="peity" height="16" width="32"><polygon fill="#1ab394" points="0 15 0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666 32 15"></polygon><polyline fill="transparent" points="0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666" stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline></svg></td>
+                                <td>Jacob</td>
+                                <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
+                            </tr>
+                            <tr>
+                                <td>21222155605</td>
+                                <td><span class="line" style="display: none;">1,6,3,9,5,9,5,3,9,6,4</span><svg class="peity" height="16" width="32"><polygon fill="#1ab394" points="0 15 0 13.833333333333334 3.2 5.5 6.4 10.5 9.600000000000001 0.5 12.8 7.166666666666666 16 0.5 19.200000000000003 7.166666666666666 22.400000000000002 10.5 25.6 0.5 28.8 5.5 32 8.833333333333332 32 15"></polygon><polyline fill="transparent" points="0 13.833333333333334 3.2 5.5 6.4 10.5 9.600000000000001 0.5 12.8 7.166666666666666 16 0.5 19.200000000000003 7.166666666666666 22.400000000000002 10.5 25.6 0.5 28.8 5.5 32 8.833333333333332" stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline></svg></td>
+                                <td>Damien</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{template "footer" .}}
+
+    <!-- Mainly scripts -->
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/jquery-3.1.1.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/bootstrap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="https://s3-us-west-2.amazonaws.com/qolty/demo/js/inspinia.js"></script>
+
+    <script>
+        $("#studyName").html(window.localStorage.getItem('studyName'));
+
+        if (window.localStorage.getItem('studyLocations') != "" && window.localStorage.getItem('studyLocations') != null) {
+            $("#studyLocations").html(window.localStorage.getItem('studyLocations'));
+        }
+
+        if (window.localStorage.getItem('studyLanguages') != "" && window.localStorage.getItem('studyLanguages') != null) {
+            $("#studyLanguages").html(window.localStorage.getItem('studyLanguages'));
+        }
+
+        if (window.localStorage.getItem('studyType') != "" && window.localStorage.getItem('studyType') != null) {
+            $("#studyType").html(window.localStorage.getItem('studyType'));
+        }
+
+        if (window.localStorage.getItem('studyDurationStart') != "" && window.localStorage.getItem('studyDurationStart') != null) {
+            $("#studyDurationStart").html(window.localStorage.getItem('studyDurationStart'));
+        }
+
+        if (window.localStorage.getItem('studyDurationEnd') != "" && window.localStorage.getItem('studyDurationEnd') != null) {
+            $("#studyDurationEnd").html(window.localStorage.getItem('studyDurationEnd'));
+        }
+
+        $("#studyNumParticipants").html(window.localStorage.getItem('studyNumParticipants'));
+
+        var estModuleCost = 0;
+
+        for (var key in window.localStorage){
+            if(key.indexOf("subjective") != -1){
+                if (window.localStorage.getItem(key) == "true"){
+                    $("#modules").append(key.split("subjective-")[1] + "<br>");
+                    estModuleCost += 5;
+                }
+            }
+        }
+
+        for (var key in window.localStorage){
+            if(key.indexOf("objective") != -1){
+                if (window.localStorage.getItem(key) == "true"){
+                    $("#modules").append(key.split("objective-")[1] + "<br>");
+                    estModuleCost += 10;
+                }
+            }
+        }
+
+        for (var key in window.localStorage){
+            if(key.indexOf("advanced") != -1){
+                if (window.localStorage.getItem(key) == "true"){
+                    $("#modules").append(key.split("advanced-")[1] + "<br>");
+                    estModuleCost += 15;
+                }
+            }
+        }
+
+        for (var key in window.localStorage){
+            if(key.indexOf("plan") != -1){
+                if (window.localStorage.getItem(key) == "true"){
+                    $("#modules").append(key.split("plan-")[1] + "<br>");
+                }
+            }
+        }
+
+        $("#modules").append("<br>Estimated monthly cost: $" + (parseInt(window.localStorage.getItem('studyNumParticipants')) * 20 + parseInt(window.localStorage.getItem('studyNumParticipants')) * estModuleCost) + " <a href='https://qolty.com/pricing/' target='_blank' class='fa fa-question-circle moduleInfo'></a>");
+    </script>
+
+</body>
+</html>
+{{end}}

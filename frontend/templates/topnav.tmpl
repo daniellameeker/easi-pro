@@ -1,0 +1,31 @@
+{{define "topnav"}}
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <div id="navText" class="navbar-minimalize minimalize-styl-2" style="margin-top:18px;"></div>
+    </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <!-- <li>
+                <label class="switch">
+                  <input id="onlineButton" type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </li> -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" href="https://qolty.com/about/" target="_blank" style="font-weight: 400;"> <span class="userName"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                    <li>
+                        <a href="https://qolty.com/">
+                            <div>
+                                Logout
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+{{end}}
